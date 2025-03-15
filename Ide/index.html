@@ -18,6 +18,7 @@
         #container {
             display: flex;
             flex-grow: 1;
+            min-height: 0; 
         }
 
         #editor-container, #console-container {
@@ -30,6 +31,7 @@
             border-radius: 5px;
             display: flex;
             flex-direction: column;
+            max-height: calc(100vh - 120px);
         }
 
         #editor-container {
@@ -51,10 +53,12 @@
             height: 100%;
             width: 100%;
             border: 1px solid #eee;
+            flex-grow: 1;
+            /* Remove overflow-y: auto; from here */
         }
         .CodeMirror-scroll {
-            overflow-y: hidden;
             overflow-x: auto;
+            overflow-y: auto; /* Add overflow-y: auto; here */
         }
 
         #console {
@@ -67,9 +71,11 @@
             color: #eee;
             overflow-y: auto;
             padding: 10px;
+            flex-grow: 1;
         }
         .editor-codemirror{
           flex-grow: 1;
+          height: 100%;
         }
 
         #toolbar {
@@ -116,7 +122,8 @@
         </div>
     </div>
     <footer>
-        <p>IDE simples</p>
+        <p>IDE simples - Por Victor Mateus
+        </p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>

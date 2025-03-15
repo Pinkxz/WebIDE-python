@@ -1,4 +1,4 @@
-importScripts('https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js'); // Carrega o Pyodide
+importScripts('https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js');
 
 async function loadPyodideAndRun(code) {
   let pyodide = await loadPyodide({
