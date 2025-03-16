@@ -1,3 +1,5 @@
+//Para casos sem live server; python -m http.server 8080
+//http://localhost:8080/
 //Inicializando o editor de código usando CodeMirror, definindo alguns parâmetros
 const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   mode: "python",       
